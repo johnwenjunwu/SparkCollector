@@ -112,8 +112,8 @@ public class POICollector extends AbstractCollector {
                 nextdx += 0.1;
                 nextdy += 0.1;
             }
-            System.out.println("dx: " + dx + ", nextdx: " + nextdx);
-            System.out.println("Count: " + cnt);
+            //System.out.println("dx: " + dx + ", nextdx: " + nextdx);
+            //System.out.println("Count: " + cnt);
         } catch (SQLException ex) {
             System.out.println("SQLException caught");
             System.out.println("---");

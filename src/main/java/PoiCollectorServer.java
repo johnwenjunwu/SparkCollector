@@ -56,7 +56,7 @@ public class PoiCollectorServer {
                     double lon = Double.parseDouble(parameters.get("lon"));
                     double lat = Double.parseDouble(parameters.get("lat"));
                     if (collector != null) {
-                        errorHandle(exchange, "Crawler already started!");
+                        errorHandle(exchange, "POI Collector already started!");
                         return;
                     }
                     collector = new POICollector(second, lon, lat);
@@ -73,7 +73,7 @@ public class PoiCollectorServer {
                 }
                 else if (start == 0) {  // stop the crawler
                     if (collector == null) {
-                        errorHandle(exchange, "Crawler NOT started yet!");
+                        errorHandle(exchange, "POI Collector NOT started yet!");
                         return;
                     }
                     collector.stop();  // stop previous collector
@@ -81,7 +81,7 @@ public class PoiCollectorServer {
                 }
                 else {  // request data from the running collect
                     if (collector == null) {
-                        errorHandle(exchange, "Crawler NOT started yet!");
+                        errorHandle(exchange, "POI Collector NOT started yet!");
                         return;
                     }
                     String jsonString = collector.results();
